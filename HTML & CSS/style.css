@@ -1,0 +1,131 @@
+/* Ustawienia dla całego dokumentu */
+body {
+    background-image: url("perfume.jpg"); /* Dodanie tła z obrazem perfum */
+    background-size: cover; /* Dopasowanie rozmiaru tła */
+    margin-top: 30px; /* Ustawienie marginesu dla góry dokumentu */
+    margin-left: 80px;
+    margin-right: 80px;
+    display: grid; /* Ustawienie modelu wyświetlania na siatkę */
+    grid-template-rows: auto 1fr auto; /* Podział na trzy wiersze: auto, 1fr, auto */
+    grid-template-columns: 15% 85%; /* Podział na dwie kolumny: 15%, 85% */
+    grid-template-areas:
+        "navigation sec" /* Obszar nawigacji i sekcji */
+        "navigation sec" /* Kolejny obszar nawigacji i sekcji */
+        "footer footer"; /* Obszar stopki */
+}
+
+/* Styl dla akapitów */
+p {
+    font-size: 20px; /* Ustawienie rozmiaru fontu na 20px */
+}
+
+/* Styl dla nagłówka pierwszego poziomu */
+h1 {
+    font-size: 50px; /* Ustawienie rozmiaru fontu na 50px */
+    color: rgb(139, 0, 0); /* Ustawienie koloru tekstu na ciemnoczerwony */
+}
+
+/* Styl dla klasy menu */
+.menu {
+    background-color: rgba(73, 73, 73, 0.5); /* Ustawienie koloru tła menu z 50% transparentnością */
+}
+
+/* Styl dla nawigacji */
+nav {
+    grid-area: navigation; /* Przypisanie do obszaru nawigacji w siatce */
+}
+
+nav ul {
+    margin: 0;
+    list-style-type: none;
+    padding: 0;
+}
+
+/* Styl dla elementów listy w nawigacji */
+nav ul li a {
+    background-color: rgb(255, 0, 47); /* Ustawienie koloru tła dla linków */
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: white;
+    transition: background-color 0.3s, opacity 0.3s; /* Animacja zmiany koloru tła i przejrzystości */
+}
+
+/* Efekt hover dla elementów listy w nawigacji */
+nav ul li a:hover {
+    background-color: rgb(53, 13, 79); /* Zmiana koloru tła po najechaniu myszką */
+    opacity: 0.8; /* Zmiana przejrzystości po najechaniu myszką */
+}
+
+/* Styl dla elementów podrzędnego poziomu w nawigacji */
+nav ul li ul li a {
+    background-color: rgb(27, 27, 160); /* Kolor tła dla podrzędnych linków */
+    padding-left: 35px; /* Dodatkowy padding dla lepszego wyrównania */
+}
+
+/* Styl dla sekcji */
+section {
+    padding: 30px; /* Dodatkowy padding dla sekcji */
+    overflow-y: auto; /* Obsługa przewijania w pionie, gdy zawartość jest dłuższa niż wysokość */
+    max-height: 70vh; /* Maksymalna wysokość sekcji - 90% wysokości widoku */
+    background-color: rgb(255, 255, 255); /* Kolor tła sekcji */
+    grid-area: sec; /* Przypisanie do obszaru sec w siatce */
+    border-radius: 25px; /* Zaokrąglenie rogów sekcji */
+}
+
+/* Styl dla formularza */
+form {
+    display: grid; /* Ustawienie formularza jako siatka */
+    grid-template-columns: 1fr 1fr; /* Podział na dwie kolumny w formularzu */
+}
+
+/* Styl dla tabeli */
+table {
+    width: 100%; /* Szerokość tabeli na 100% */
+}
+
+/* Styl dla nagłówków tabeli */
+th {
+    background-color: rgb(45, 5, 0); /* Kolor tła nagłówków */
+    color: #ffffff; /* Kolor tekstu na biały */
+}
+
+/* Styl dla komórek tabeli */
+td {
+    text-align: center; /* Wyśrodkowanie tekstu w komórkach */
+}
+
+/* Styl dla co drugiego wiersza w tabeli */
+tr:nth-child(even) {
+    background-color: #ffb3b3; /* Kolor tła dla parzystych wierszy */
+}
+
+/* Styl dla nagłówka */
+.header {
+    background-color: rgba(0, 0, 0, 0.3); /* Kolor tła nagłówka z 30% transparentnością */
+    width: 300px; /* Szerokość nagłówka */
+}
+
+/* Styl dla stopki */
+footer {
+    text-align: center; /* Wyśrodkowanie tekstu w stopce */
+    background-color: rgb(139, 21, 0); /* Kolor tła stopki */
+    color: white; /* Kolor tekstu na biały */
+    grid-column: span 2; /* Rozciągnięcie stopki na dwie kolumny */
+    max-height: 15vh; /* Maksymalna wysokość sekcji - 90% wysokości widoku */
+}
+
+footer p {
+    color: #ffffff;
+    margin: 7px;
+    align-items: center;
+  }
+
+/* Styl dla obrazów */
+img {
+    border-radius: 25px; /* Zaokrąglenie rogów obrazu */
+    width: 100px; /* Dostosowanie szerokości obrazu */
+    height: 200px; /* Dostosowanie wysokości obrazu */
+    display: block;
+    margin: auto; /* Wyśrodkowanie obrazu */
+}
